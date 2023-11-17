@@ -1,0 +1,133 @@
+@use 'colors';
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 34px;
+    margin-left: 34px;
+}
+
+.navmenu{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 50px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    border-radius: 100px;
+    border: 1px solid colors.$mainBorder;
+    margin-top: 22px;
+    margin-bottom: 22px;
+
+    &__logo{
+        display: flex; 
+        width: 156px;
+        margin-left: 34px;
+
+    }
+
+    &__links{
+        display: flex;
+        align-items: center;
+
+        .login-btn{
+            background-color: colors.$brandColor;
+            border-radius: 82px;
+            padding: 12px 24px;
+            margin-left: 30px;
+            margin-right: 34px;
+
+            a{
+                color: colors.$menuBG;
+            }
+
+            &:hover{
+                background-color: colors.$brandColor;
+            border-radius: 82px;
+            padding: 12px 24px;
+          
+            margin-right: 34px;
+            }
+            
+        }
+
+
+        &__item{
+            display: flex;
+            align-items: center;
+            padding: 12px 24px;
+            cursor: pointer;
+            
+
+      
+            
+            
+            &:hover{
+                background-color: colors.$mainBorder;
+                border-radius: 82px;
+            
+            }
+
+            
+
+            a{
+                color: white;
+                background-color: transparent;
+            }
+            
+        }
+    }
+
+
+}
+
+.mobile-menu {
+    display: none;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navmenu{
+        display: flex;
+        justify-content: space-around;
+        background-color: colors.$menuBG;
+
+        &__logo{
+            margin: 0;
+        }
+    }
+
+    .navmenu__links {
+        display: none;
+        flex-direction: column;
+        background-color: colors.$menuBG;
+        position: absolute;
+        top: 110px;
+        left: 0px;
+        padding: 10px;
+        z-index: 1;
+        
+
+        &__item{
+            background-color: transparent;
+        }
+    }
+
+    .navmenu__links.active {
+        display: flex;
+        transition: opacity 0.3s ease;
+    }
+}
+

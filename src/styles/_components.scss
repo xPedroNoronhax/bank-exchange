@@ -1,0 +1,43 @@
+@use 'colors';
+
+.main-btn{
+    padding: 18px 30px;
+    display: flex;
+    align-items: center;
+    border-radius: 82px;
+    background-color: colors.$brandColor;
+    color: colors.$menuBG ;
+    max-width: 183px;
+    cursor: pointer;
+}
+
+.exchange-btn{
+    display: flex;
+    padding: 14px 28px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 72px;
+    background-color: colors.$exchangeBtn;
+    color: #d1ff4d;
+    cursor: pointer;
+}
+
+.convertor-space{
+    background-color: colors.$mainBG;
+    color: white;
+    padding: 10px;
+    
+    outline: none;
+    box-shadow: none;
+    border: 1px solid colors.$mainBorder;
+    &:focus{
+        border: 1px solid colors.$mainBorder;
+        outline: none;
+    }
+}
+
+#mobile-menu-button{
+    background-color: colors.$brandColor;
+    border: none;
+    padding: 5px;
+}

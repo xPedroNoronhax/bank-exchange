@@ -1,0 +1,86 @@
+@use 'colors';
+@use 'header';
+@use 'hero';
+@use 'components';
+
+*{
+    font-family: 'Lexend', sans-serif;
+    background-color: colors.$mainBG;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    li {
+        list-style-type: none;
+
+        a{
+            text-decoration: none;
+        }
+    }
+
+    input{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+}
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+@mixin text($fontSize: 18px) {
+    font-size: $fontSize;
+    font-weight: 400;
+    line-height: $fontSize + 9px;
+}
+
+@mixin title($fontSize: 48px){
+    @include text($fontSize)
+
+}
+
+.text {
+    @include text;
+    
+    @media (max-width: 768px){
+        @include text(14px)
+    }
+}
+
+.text-p{
+    @include text;
+    font-weight: 300;
+
+    @media (max-width: 768px){
+        @include text(14px)
+    }
+}
+
+.title-big{
+    @include title;
+    font-weight: 500;
+
+    @media (max-width: 768px){
+        @include title(28px)
+    }
+}
+
+
+
+.title-md{
+    @include title(30px);
+    font-weight: 400;
+}
+
+body{
+    background-color: colors.$mainBG;
+}
+
+@media (max-width: 750px){
+    .container{
+        width: 90%;
+    }
+}
+

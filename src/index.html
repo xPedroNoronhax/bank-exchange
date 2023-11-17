@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourBank</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+ 
+    <link rel="stylesheet" href="styles/main.scss">
+
+</head>  
+<body>
+    <div class="container">
+        <header class="navbar">
+            <div class="navmenu">
+                <div class="navmenu__logo">
+                    <img class="sharp" src="images/shape-30.svg" alt="">
+                    <img class="ybtext" src="images/YourBanK.svg" alt="">
+                </div>
+                
+                <ul class="navmenu__links">
+                    <li class="navmenu__links__item">
+                        <a class="text" href="">Home</a>
+                    </li>
+                    <li class="navmenu__links__item"><a class="text" href="">Carrers</a></li>
+                    <li class="navmenu__links__item"><a class="text" href="">About</a></li>
+                    <li class="navmenu__links__item"><a class="text" href="">Security</a></li>
+                </ul> 
+                <ul class="navmenu__links secondchild">
+                    <li class="navmenu__links__item"><a class="text " href="">Sign Up</a></li>
+                    <li class="navmenu__links__item login-btn "><a class="text" href="">Login</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <button id="mobile-menu-button">☰</button>
+                    <ul class="navmenu__links"> 
+                        <li class="navmenu__links__item"><a class="text" href="">Home</a></li>
+                        <li class="navmenu__links__item"><a class="text" href="">Carrers</a></li>
+                        <li class="navmenu__links__item"><a class="text" href="">About</a></li>
+                        <li class="navmenu__links__item"><a class="text" href="">Security</a></li>
+                        <li class="navmenu__links__item"><a class="text" href="">Sign Up</a></li>
+                        <li class="navmenu__links__item login-btn"><a class="text" href="">Login</a></li>
+                    </ul>
+                </div> 
+            </div> 
+        </header>
+ 
+        <section class="hero_section"> 
+            <div class="advertise">
+                <div class="advertise__baloon">
+                    <img src="images/correct.svg" alt="">
+                    <span class="text-p">No LLC Required, No Credit Check.</span>
+                </div> 
+                <div class="advertise__title"> 
+                    <h1 class="title-big"> 
+                        Welcome to YourBank
+                        Empowering Your <span>Financial Journey</span>    
+                    </h1>        
+                    <p class="text-p">
+                        At YourBank, our mission is to provide comprehensive banking solutions that empower individuals and businesses to achieve their financial goals. We are committed to delivering personalized and innovative services that prioritize our customers' needs.
+                    </p>  
+                </div>
+                <div class="main-btn">
+                    Open Account  
+                </div>
+            </div>    
+            <div class="exchange"> 
+                <h2 class="title-md">Money <span>Exchange</span></h2>
+                <div class="exchange__menu">
+                    <div class="exchange__menu__cotation">
+                        <div class="exchange__menu__cotation__flag">
+                            <div class="show-flag">
+                                <div class="flag-container">
+                                    <img src="https://flagicons.lipis.dev/flags/4x3/br.svg" alt="">
+                                </div>
+                            </div>
+                            <select class="flags" name="from" onchange="atualizaPais(this); converterMoeda();"> 
+                                <option value="brasil" selected>Brasil</option>
+                                <option value="argentina">Argentina</option>
+                                <option value="canada">Canada</option>
+                                <option value="usa">Estados Unidos</option>
+                                <option value="euro">Euro</option>
+                                <option value="uk">Reino Unido</option>
+                            </select>
+                        </div>
+                        <div  class="exchange__menu__cotation__price">
+                            <span class="text-p"><input type="number" class="convertor-space" id="amountInput" oninput="converterMoeda();"></span>
+                        </div>
+                    </div> 
+                    <div class="exchange__menu__cotation">
+                        <div class="exchange__menu__cotation__flag">
+                            <div class="show-flag">
+                                <div class="flag-container">
+                                    <img src="https://flagicons.lipis.dev/flags/4x3/um.svg" alt="">
+                                </div>
+                            </div>
+                            <select class="flags" name="to" onchange="converterMoeda();">
+                                <option value="brasil">Brasil</option>
+                                <option value="argentina">Argentina</option>
+                                <option value="canada">Canada</option>
+                                <option value="usa" selected>Estados Unidos</option>
+                                <option value="euro">Euro</option>
+                                <option value="uk">Reino Unido</option>
+                            </select>
+                        </div>
+                        <div class="exchange__menu__cotation__price">
+                            <span class="text-p"><input type="number" class="convertor-space" id="convertedAmount" disabled ></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="exchange-btn">
+                    Exchange
+                </div>
+            </div>
+
+        </section>
+
+      
+    </div>
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
